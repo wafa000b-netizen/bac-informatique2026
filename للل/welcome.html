@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8" />
+<title>مرحبا بك في موقع باك إنفو</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #f0f0f0;
+    overflow: hidden;
+  }
+
+  .welcome-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+  }
+
+  /* صورة التوقيع كخلفية شفافة كبيرة */
+  body::before {
+    content: "N";
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40rem;
+    font-weight: 200;
+    font-family: 'Cairo', sans-serif;
+    color: rgba(136, 130, 130, 0.936);
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+
+  p {
+    font-size: 1.4rem;
+    margin-bottom: 40px;
+    max-width: 450px;
+    line-height: 1.5;
+  }
+
+  button {
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 15px;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background: #2980b9;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    body::before {
+      font-size: 15rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1.1rem;
+      max-width: 90%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="welcome-container">
+  <h1>مرحبا بك في موقع باك إنفو</h1>
+  <p>هذا الموقع مخصص لتقديم دروس وشروحات تساعدك على مراجعة باك إنفو بسهولة وفعالية.</p>
+  <button onclick="goToLessons()"> Clik👩‍💻</button>
+</div>
+
+<script>
+  function goToLessons() {
+    window.location.href = "indxe.html";
+  }
+</script>
+
+</body>
+</html>

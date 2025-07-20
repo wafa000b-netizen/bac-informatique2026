@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+body {
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #f0f0f0;
+}
+
+/* العناوين */
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* قائمة الدروس */
+.lesson-list {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.lesson-list li {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.lesson-list li:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+.lesson-list a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+/* صفحة تفاصيل الدرس */
+.lesson-details {
+  max-width: 600px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.lesson-details h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #e3e3e3;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.lesson-details p {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+
+/* زر الرجوع */
+button {
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #2980b9;
+}
+
+/* تأثير دخول الصفحة */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .lesson-list li {
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+  .lesson-details {
+    max-width: 90%;
+    padding: 15px;
+  }
+  .lesson-details h1 {
+    font-size: 2rem;
+  }
+  .lesson-details p {
+    font-size: 1.2rem;
+  }
+}
